@@ -28,6 +28,9 @@ public class DynaTechItems {
     public static final SubItemGroup DT_TOOLS = new SubItemGroup(new NamespacedKey(DynaTech.getInstance(), "DT_TOOLS"), DT_GENERAL, new CustomItemStack(Material.DIAMOND_AXE, "&bDynaTech Tools"));
     public static final SubItemGroup DT_MACHINES = new SubItemGroup(new NamespacedKey(DynaTech.getInstance(), "DT_MACHINES"), DT_GENERAL, new CustomItemStack(Material.SEA_LANTERN, "&bDynaTech Machines"));
     public static final SubItemGroup DT_GENERATORS = new SubItemGroup(new NamespacedKey(DynaTech.getInstance(), "DT_GENERATORS"), DT_GENERAL, new CustomItemStack(Material.PRISMARINE_BRICKS, "&bDynaTech Generators"));
+    
+    public static final SubItemGroup DT_HIVES = new SubItemGroup(new NamespacedKey(DynaTech.getInstance(), "DT_HIVES"), DT_GENERAL, new CustomItemStack(Material.BEEHIVE, "&bDynaTech Apiaries"));
+
 
     public static final RecipeType DynaTechScoop = new RecipeType(new NamespacedKey(DynaTech.getInstance(), "dt_scoop"),
         new CustomItemStack(Material.IRON_SHOVEL, "&bScoop the Bee using a Scoop")
@@ -204,6 +207,20 @@ public class DynaTechItems {
     public static final SlimefunItemStack AUTO_KITCHEN = new SlimefunItemStack("AUTO_KITCHEN",
         Material.SMOKER,
         "&6Auto Kitchen",
+        "",
+        "&fAutomatically makes Kitchen recipes",
+        "",
+        "&f&oSmells like cookies",
+        "",
+        LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE),
+        LoreBuilder.speed(1),
+        LoreBuilderDynamic.powerPerSecond(16)
+    );
+
+    //Machines
+    public static final SlimefunItemStack KITCHEN_AUTO_CRAFTER = new SlimefunItemStack("KITCHEN_AUTO_CRAFTER",
+        new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode("c5c5b24cd5efa07d31beea655d7ff972e6f47cdb898be4404363deeba43ba5d"))),
+        "&6Kitchen Auto Crafter",
         "",
         "&fAutomatically makes Kitchen recipes",
         "",
